@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #61dafb;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.service-card {
+  background: #444;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.react-card {
+  border-left: 4px solid #61dafb;
+}
+
+.python-card {
+  border-left: 4px solid #3776ab;
+}
+
+.java-card {
+  border-left: 4px solid #f89820;
+}
+
+.go-card {
+  border-left: 4px solid #00add8;
+}
+
+.service-card h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.service-card p {
+  color: #ccc;
+  margin: 15px 0;
+}
+
+.tech-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #333;
+  border-radius: 10px;
+}
+
+.footer p {
+  color: #ccc;
+  margin: 0;
+}

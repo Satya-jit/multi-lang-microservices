@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  frontend-react:
+    build: ./frontend-react
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-python
+      - backend-java
+      - backend-go
+    networks:
+      - app-network
+
+  backend-python:
+    build: ./backend-python
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+    networks:
+      - app-network
+
+  backend-java:
+    build: ./backend-java
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+  backend-go:
+    build: ./backend-go
+    ports:
+      - "8090:8090"
+    environment:
+      - PORT=8090
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

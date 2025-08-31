@@ -15,7 +15,7 @@ services:
   backend-python:
     image: satya490/multi-lang-python:latest
     ports:
-      - "5000:5000"
+      - "5050:5000"
     environment:
       - PORT=5000
     networks:

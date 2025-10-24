@@ -1,0 +1,291 @@
+pages:
+  - name: Home
+    columns:
+      # Left Column (Small)
+      - size: small
+        widgets:
+          # Calendar Widget
+          - type: calendar
+            title: "CALENDAR"
+
+          # RSS Feed Widget
+          - type: rss
+            title: "RSS FEED"
+            style: vertical-list
+            cache: 30m
+            limit: 10
+            collapse-after: 5
+            feeds:
+              - url: https://feeds.feedburner.com/oreilly/radar
+                title: "O'Reilly Radar"
+              - url: https://rss.cnn.com/rss/edition.rss
+                title: "CNN"
+              - url: https://feeds.bbci.co.uk/news/technology/rss.xml
+                title: "BBC Tech"
+
+          # YouTube Channels Widget
+          - type: videos
+            title: "TECH CHANNELS"
+            style: vertical-list
+            collapse-after: 5
+            limit: 10
+            channels:
+              - UCXuqSBlHAE6Xw-yeJA0Tunw  # Linus Tech Tips
+              - UCBJycsmduvYEL83R_U4JriQ  # MKBHD
+              - UCtinbF-Q-fVthA0qrFQTgXQ  # The Verge
+              - UCiT9RITQ9PW6BhXK0y2DiJQ  # Unbox Therapy
+              - UC7YOGHUfC1Tb6E4pudI9STA  # Mental Outlaw
+              - UCld68syR8Wi-GY_n4CaoJGA  # Brodie Robertson
+              - UCkWQ0gDrqOCarmUKmppD7GQ  # NetworkChuck
+              - UC2eYFnH61tmytImy1mTYvhA  # Luke Smith
+
+      # Middle Column (Full)
+      - size: full
+        widgets:
+          # Tech News Widget
+          - type: rss
+            title: "TECH NEWS - NETWORKING | LINUX | DEVOPS | CLOUD"
+            style: vertical-list
+            cache: 15m
+            limit: 20
+            collapse-after: 10
+            feeds:
+              - url: https://feeds.feedburner.com/oreilly/radar
+                title: "O'Reilly Radar"
+              - url: https://www.linux.com/feed/
+                title: "Linux.com"
+              - url: https://www.networkworld.com/category/networking/index.rss
+                title: "Network World"
+              - url: https://devops.com/feed/
+                title: "DevOps.com"
+              - url: https://aws.amazon.com/blogs/aws/feed/
+                title: "AWS Blog"
+              - url: https://cloud.google.com/blog/rss
+                title: "Google Cloud Blog"
+              - url: https://www.redhat.com/en/rss/blog
+                title: "Red Hat Blog"
+              - url: https://kubernetes.io/feed.xml
+                title: "Kubernetes Blog"
+              - url: https://www.docker.com/blog/feed/
+                title: "Docker Blog"
+              - url: https://www.phoronix.com/rss.php
+                title: "Phoronix Linux"
+
+          # Videos Widget
+          - type: videos
+            title: "NETWORKING & DEVOPS"
+            style: horizontal-cards
+            limit: 8
+            collapse-after: 6
+            channels:
+              # Networking and DevOps channels
+              - UCkWQ0gDrqOCarmUKmppD7GQ  # NetworkChuck
+              - UCdngmbVKX1Tgre699-XLlUA  # TechWorld with Nana
+              - UC8butISFwT-Wl7EV0hUK0BQ  # freeCodeCamp
+              - UCsvqVGtbOuRLlbFAhg8TbEA  # The DevOps Guy
+              - UC4xKdmAXFh4ACyhpiQ_3qBw  # David Bombal
+              - UCWn5L8EZZxZP3zQRkGEhF9A  # DevOps Toolkit
+              - UC6SVWyxc8OJhFfOYMp_5V8w  # Cloud Security Podcast
+              - UCJhay24LTpO1s4bIZxuIqKw  # KodeKloud
+
+      # Right Column (Small)
+      - size: small
+        widgets:
+          # Weather Widget
+          - type: weather
+            title: "WEATHER"
+            location: "Bangalore, India"
+            units: metric
+            hour-format: 12h
+
+          # Markets Widget
+          - type: markets
+            title: "MARKETS"
+            markets:
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: NVDA
+                name: NVIDIA
+              - symbol: AMD
+                name: AMD
+              - symbol: GOOGL
+                name: Google
+              - symbol: AAPL
+                name: Apple
+              - symbol: MSFT
+                name: Microsoft
+
+          # Repository Widget
+          - type: repository
+            title: "REPOSITORY"
+            repository: glanceapp/glance
+            pull-requests-limit: 5
+            issues-limit: 3
+
+  # Markets Page
+  - name: Markets
+    columns:
+      - size: small
+        widgets:
+          - type: markets
+            title: "Indices"
+            markets:
+              - symbol: SPY
+                name: S&P 500
+              - symbol: DX-Y.NYB
+                name: Dollar Index
+
+          - type: markets
+            title: "Crypto"
+            markets:
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: ETH-USD
+                name: Ethereum
+              - symbol: ADA-USD
+                name: Cardano
+
+      - size: full
+        widgets:
+          - type: markets
+            title: "Technology Stocks"
+            sort-by: absolute-change
+            markets:
+              - symbol: NVDA
+                name: NVIDIA
+              - symbol: AAPL
+                name: Apple
+              - symbol: MSFT
+                name: Microsoft
+              - symbol: GOOGL
+                name: Google
+              - symbol: AMD
+                name: AMD
+              - symbol: TSLA
+                name: Tesla
+              - symbol: META
+                name: Meta
+              - symbol: NFLX
+                name: Netflix
+
+      - size: small
+        widgets:
+          - type: markets
+            title: "Other"
+            markets:
+              - symbol: GOLD
+                name: Gold
+              - symbol: CL=F
+                name: Crude Oil
+
+  # Gaming Page  
+  - name: Gaming
+    columns:
+      - size: small
+        widgets:
+          - type: videos
+            title: "Gaming Videos"
+            style: vertical-list
+            collapse-after: 5
+            channels:
+              - UCylGcI1L_2yLVX6p1aPXd9g  # GameGrumps
+
+          - type: twitch-channels
+            title: "Gaming Streams"
+            collapse-after: 5
+            channels:
+              - "asmongold"
+              - "shroud"
+              - "xqc"
+
+      - size: full
+        widgets:
+          - type: rss
+            title: "Gaming News"
+            style: horizontal-cards
+            cache: 1h
+            limit: 12
+            collapse-after: 8
+            feeds:
+              - url: https://www.polygon.com/rss/index.xml
+                title: "Polygon"
+              - url: https://www.gamespot.com/feeds/news/
+                title: "GameSpot"
+              - url: https://www.ign.com/articles.xml
+                title: "IGN"
+
+  # Homelab Page
+  - name: Homelab
+    columns:
+      - size: small
+        widgets:
+          - type: monitor
+            title: "Services"
+            cache: 1m
+            sites:
+              - title: Glance Dashboard
+                url: http://zeta-core.local:8080
+                icon: si:gauge
+              - title: Portainer
+                url: http://zeta-core.local:9000
+                icon: si:portainer
+              - title: Pi-hole Admin
+                url: http://zeta-core.local:80
+                icon: si:pihole
+              - title: Grafana
+                url: http://zeta-core.local:3000
+                icon: si:grafana
+
+      - size: full
+        widgets:
+          - type: docker-containers
+            title: "Docker Containers"
+            containers:
+              glance:
+                name: "Glance Dashboard"
+                description: "Personal dashboard and homepage"
+                url: "http://zeta-core.local:8080"
+                icon: "si:gauge"
+              grafana:
+                name: "Grafana"
+                description: "Monitoring and analytics platform"
+                url: "http://zeta-core.local:3000"
+                icon: "si:grafana"
+              node_exporter:
+                name: "Node Exporter"
+                description: "System metrics collector for Prometheus"
+                icon: "si:prometheus"
+              pihole:
+                name: "Pi-hole"
+                description: "Network-wide ad blocker and DNS server"
+                url: "http://zeta-core.local:80"
+                icon: "si:pihole"
+              portainer:
+                name: "Portainer"
+                description: "Docker container management"
+                url: "http://zeta-core.local:9000"
+                icon: "si:portainer"
+              prometheus:
+                name: "Prometheus"
+                description: "Monitoring system and time series database"
+                icon: "si:prometheus"
+
+          - type: releases
+            title: "Software Releases"
+            cache: 1d
+            repositories:
+              - glanceapp/glance
+              - grafana/grafana
+              - prometheus/prometheus
+              - portainer/portainer
+              - pi-hole/pi-hole
+
+server:
+  port: 8080
+  host: "0.0.0.0"
+
+theme:
+  background-color: 240 241 245
+  primary-color: 56 58 64
+  positive-color: 26 127 55
+  negative-color: 215 55 96
